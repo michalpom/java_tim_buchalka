@@ -8,6 +8,28 @@ public class BankAccount {
     private String email;
     private String phoneNumber;
 
+    //constructor
+    public BankAccount(){
+        //default values:
+        this(null,0.0d); //calling another constructor within a constructor, this must be in the firs line
+        System.out.println("A new account created");
+
+    }
+
+    public BankAccount(String accountNumber, double balance){
+        this.accountNumber=accountNumber; //or directly by setAccountNumber(accountNumber)
+        this.balance=balance;
+        System.out.println("Created account "+this.accountNumber + " with " + this.balance + "$ balance");
+    }
+
+    //menu Code/Generate/Constructor and choose fields
+
+    public BankAccount(String customerName, String email) {
+        this.customerName = customerName;
+        this.email = email;
+    }
+
+
     //menu: Code/Generate to quick generate getters and setters
 
     public void setAccountNumber(String accountNumber){
