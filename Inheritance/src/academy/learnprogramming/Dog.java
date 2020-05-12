@@ -25,6 +25,27 @@ public class Dog extends Animal {
         this.chew();
     }
 
+    private void legsMove(int speed){
+        System.out.println("legs are moving, dog doesn't know what is going on");
+        System.out.println("Legs' speed = " +speed);
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("method from Dog class called");
+        legsMove(speed);
+
+    }
+
+    public void walk(){
+        System.out.println("Dog is walking");
+        super.move(5); //super from superclass
+    }
+    public void run(){
+        System.out.println("Dog is running");
+        move(20); //method from this class because without super. If without method move() in this class it will search in superclass
+    }
+
     public int getEyes() {
         return eyes;
     }
