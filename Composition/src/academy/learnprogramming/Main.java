@@ -14,8 +14,6 @@ public class Main {
 
         PC myPC = new PC(theCase, theMonitor, theMOtherBoard);
 
-        myPC.getMonitor().drawPixel(50,200, "red");
-        myPC.getMotherboard().loadProgram("Paint");
-        myPC.getTheCase().pressPowerButton();
+        myPC.powerUp();
     }
 }
